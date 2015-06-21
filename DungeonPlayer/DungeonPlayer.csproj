@@ -1,0 +1,631 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA22FC2C-5B9D-4690-AED1-9D2A9142653F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DungeonPlayer</RootNamespace>
+    <AssemblyName>DungeonPlayer</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SharpDX">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SharpDX\Bin\DirectX11-net40\SharpDX.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DirectInput">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SharpDX\Bin\DirectX11-net40\SharpDX.DirectInput.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.MediaFoundation">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SharpDX\Bin\DirectX11-net40\SharpDX.MediaFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.XAudio2">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\SharpDX\Bin\DirectX11-net40\SharpDX.XAudio2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Compile Include="Advanced\Form\TruthAnswer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthAnswer.Designer.cs">
+      <DependentUpon>TruthAnswer.cs</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Advanced\Form\TruthBattleEnemy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthBattleEnemy.designer.cs">
+      <DependentUpon>TruthBattleEnemy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthBattleEnemySupport1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthBattleEnemySupport2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthBattleEnemySupport3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthBattleEnemySupport4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthBattleEnemySupport5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthBattleSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthBattleSetting.Designer.cs">
+      <DependentUpon>TruthBattleSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthChoiceStatue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthChoiceStatue.Designer.cs">
+      <DependentUpon>TruthChoiceStatue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthChooseCommand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthChooseCommand.Designer.cs">
+      <DependentUpon>TruthChooseCommand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthDebugForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthDebugForm.Designer.cs">
+      <DependentUpon>TruthDebugForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthDecision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthDecision.Designer.cs">
+      <DependentUpon>TruthDecision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthDecision2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthDecision2.Designer.cs">
+      <DependentUpon>TruthDecision2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthDuelPlayerStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthDuelPlayerStatus.Designer.cs">
+      <DependentUpon>TruthDuelPlayerStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthDuelRule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthDuelRule.Designer.cs">
+      <DependentUpon>TruthDuelRule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthDuelSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthDuelSelect.Designer.cs">
+      <DependentUpon>TruthDuelSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthDungeon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthDungeon.designer.cs">
+      <DependentUpon>TruthDungeon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthDungeonSupport1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthEquipmentShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthEquipmentShop.Designer.cs">
+      <DependentUpon>TruthEquipmentShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthHomeTown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthHomeTown.designer.cs">
+      <DependentUpon>TruthHomeTown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthHomeTownCommunicationSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthHomeTownDuelSupport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthInformation.Designer.cs">
+      <DependentUpon>TruthInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthItemBank.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthItemBank.Designer.cs">
+      <DependentUpon>TruthItemBank.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthItemDesc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthItemDesc.Designer.cs">
+      <DependentUpon>TruthItemDesc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthPlayerInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthPlayerInformation.Designer.cs">
+      <DependentUpon>TruthPlayerInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthPotionShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthPotionShop.Designer.cs">
+      <DependentUpon>TruthPotionShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthRequestFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthRequestFood.Designer.cs">
+      <DependentUpon>TruthRequestFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthSelectCharacter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthSelectCharacter.Designer.cs">
+      <DependentUpon>TruthSelectCharacter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthSelectEquipment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthSelectEquipment.Designer.cs">
+      <DependentUpon>TruthSelectEquipment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthSkillSpellDesc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthSkillSpellDesc.Designer.cs">
+      <DependentUpon>TruthSkillSpellDesc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthStatusPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthStatusPlayer.Designer.cs">
+      <DependentUpon>TruthStatusPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthWill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthWill.Designer.cs">
+      <DependentUpon>TruthWill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Advanced\Method.cs" />
+    <Compile Include="Advanced\Static\ActionCommandAttribute.cs" />
+    <Compile Include="Advanced\Static\TruthActionCommand.cs" />
+    <Compile Include="Advanced\Static\TruthItemAttribute.cs" />
+    <Compile Include="Advanced\TransparentLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Advanced\TruthEnemyCharacter.cs" />
+    <Compile Include="Advanced\TruthEnemyCharacterSupport1.cs" />
+    <Compile Include="Advanced\TruthImage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Advanced\TruthLayout.cs" />
+    <Compile Include="Advanced\TruthWorldEnvironment.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Basic\EnemyCharacter1.cs" />
+    <Compile Include="Basic\Form\BattleEnemy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\Form\BattleEnemy.Designer.cs">
+      <DependentUpon>BattleEnemy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\Form\BattleEnemySupport1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\Form\BattleEnemySupport2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\Form\BattleEnemySupport3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\Form\BattleItemRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\Form\BattleItemRequest.Designer.cs">
+      <DependentUpon>BattleItemRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\Form\BattleSkillRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\Form\BattleSkillRequest.Designer.cs">
+      <DependentUpon>BattleSkillRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\Form\BattleSpellRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\Form\BattleSpellRequest.Designer.cs">
+      <DependentUpon>BattleSpellRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\Form\EquipmentShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\Form\EquipmentShop.Designer.cs">
+      <DependentUpon>EquipmentShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\Form\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\Form\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\Form\HomeTown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\Form\HomeTown.Designer.cs">
+      <DependentUpon>HomeTown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\Form\HomeTownSupport1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\Form\MessageDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\Form\MessageDisplay.Designer.cs">
+      <DependentUpon>MessageDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\Form\MessageDisplayWithIcon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\Form\MessageDisplayWithIcon.Designer.cs">
+      <DependentUpon>MessageDisplayWithIcon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\Form\StatusPlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Basic\Form\StatusPlayer.Designer.cs">
+      <DependentUpon>StatusPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Basic\WorldEnvironment.cs" />
+    <Compile Include="Common\ap.cs" />
+    <Compile Include="Common\Database.cs" />
+    <Compile Include="Common\Distributions.cs" />
+    <Compile Include="Common\Form\ESCMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\ESCMenu.Designer.cs">
+      <DependentUpon>ESCMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\GameSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\GameSetting.Designer.cs">
+      <DependentUpon>GameSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\MotherForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\MotherForm.Designer.cs">
+      <DependentUpon>MotherForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\OKRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\OKRequest.Designer.cs">
+      <DependentUpon>OKRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\PopUpMini.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\PopUpMini.Designer.cs">
+      <DependentUpon>PopUpMini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\RequestInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\RequestInput.Designer.cs">
+      <DependentUpon>RequestInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\SaveLoad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\SaveLoad.Designer.cs">
+      <DependentUpon>SaveLoad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\SelectAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\SelectAction.Designer.cs">
+      <DependentUpon>SelectAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\SelectDungeon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\SelectDungeon.Designer.cs">
+      <DependentUpon>SelectDungeon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\SelectTarget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\SelectTarget.Designer.cs">
+      <DependentUpon>SelectTarget.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\SelectValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\SelectValue.Designer.cs">
+      <DependentUpon>SelectValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\YesNoRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\YesNoRequest.Designer.cs">
+      <DependentUpon>YesNoRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\YesNoRequestMini.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\YesNoRequestMini.Designer.cs">
+      <DependentUpon>YesNoRequestMini.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Form\YesNoReqWithMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Common\Form\YesNoReqWithMessage.Designer.cs">
+      <DependentUpon>YesNoReqWithMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\GroundOne.cs" />
+    <Compile Include="Common\ItemBackPack.cs" />
+    <Compile Include="Common\MainCharacter.cs" />
+    <Compile Include="Common\normaldistr.cs" />
+    <Compile Include="Common\PrimaryLogic.cs" />
+    <Compile Include="Common\XepherPlayer.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Advanced\Form\TruthAnswer.resx">
+      <DependentUpon>TruthAnswer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthBattleEnemy.resx">
+      <DependentUpon>TruthBattleEnemy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthBattleSetting.resx">
+      <DependentUpon>TruthBattleSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthChoiceStatue.resx">
+      <DependentUpon>TruthChoiceStatue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthChooseCommand.resx">
+      <DependentUpon>TruthChooseCommand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthDebugForm.resx">
+      <DependentUpon>TruthDebugForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthDecision.resx">
+      <DependentUpon>TruthDecision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthDecision2.resx">
+      <DependentUpon>TruthDecision2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthDuelPlayerStatus.resx">
+      <DependentUpon>TruthDuelPlayerStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthDuelRule.resx">
+      <DependentUpon>TruthDuelRule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthDuelSelect.resx">
+      <DependentUpon>TruthDuelSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthDungeon.resx">
+      <DependentUpon>TruthDungeon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthEquipmentShop.resx">
+      <DependentUpon>TruthEquipmentShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthHomeTown.resx">
+      <DependentUpon>TruthHomeTown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthInformation.resx">
+      <DependentUpon>TruthInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthItemBank.resx">
+      <DependentUpon>TruthItemBank.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthItemDesc.resx">
+      <DependentUpon>TruthItemDesc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthPlayerInformation.resx">
+      <DependentUpon>TruthPlayerInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthPotionShop.resx">
+      <DependentUpon>TruthPotionShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthRequestFood.resx">
+      <DependentUpon>TruthRequestFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthSelectCharacter.resx">
+      <DependentUpon>TruthSelectCharacter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthSelectEquipment.resx">
+      <DependentUpon>TruthSelectEquipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthSkillSpellDesc.resx">
+      <DependentUpon>TruthSkillSpellDesc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthStatusPlayer.resx">
+      <DependentUpon>TruthStatusPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthWill.resx">
+      <DependentUpon>TruthWill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\Form\BattleEnemy.resx">
+      <DependentUpon>BattleEnemy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\Form\BattleItemRequest.resx">
+      <DependentUpon>BattleItemRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\Form\BattleSkillRequest.resx">
+      <DependentUpon>BattleSkillRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\Form\BattleSpellRequest.resx">
+      <DependentUpon>BattleSpellRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\Form\EquipmentShop.resx">
+      <DependentUpon>EquipmentShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\Form\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\Form\HomeTown.resx">
+      <DependentUpon>HomeTown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\Form\MessageDisplay.resx">
+      <DependentUpon>MessageDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\Form\MessageDisplayWithIcon.resx">
+      <DependentUpon>MessageDisplayWithIcon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Basic\Form\StatusPlayer.resx">
+      <DependentUpon>StatusPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\ESCMenu.resx">
+      <DependentUpon>ESCMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\GameSetting.resx">
+      <DependentUpon>GameSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\MotherForm.resx">
+      <DependentUpon>MotherForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\OKRequest.resx">
+      <DependentUpon>OKRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\PopUpMini.resx">
+      <DependentUpon>PopUpMini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\RequestInput.resx">
+      <DependentUpon>RequestInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\SaveLoad.resx">
+      <DependentUpon>SaveLoad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\SelectAction.resx">
+      <DependentUpon>SelectAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\SelectDungeon.resx">
+      <DependentUpon>SelectDungeon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\SelectTarget.resx">
+      <DependentUpon>SelectTarget.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\SelectValue.resx">
+      <DependentUpon>SelectValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\YesNoRequest.resx">
+      <DependentUpon>YesNoRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\YesNoRequestMini.resx">
+      <DependentUpon>YesNoRequestMini.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\Form\YesNoReqWithMessage.resx">
+      <DependentUpon>YesNoReqWithMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Common\XepherPlayer.resx">
+      <DependentUpon>XepherPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

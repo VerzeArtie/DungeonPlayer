@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DungeonPlayer", "DungeonPlayer\DungeonPlayer.csproj", "{CA22FC2C-5B9D-4690-AED1-9D2A9142653F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://altomo2014.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = DungeonPlayer\\DungeonPlayer.csproj
+		SccProjectName1 = DungeonPlayer
+		SccLocalPath1 = DungeonPlayer
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA22FC2C-5B9D-4690-AED1-9D2A9142653F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA22FC2C-5B9D-4690-AED1-9D2A9142653F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA22FC2C-5B9D-4690-AED1-9D2A9142653F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA22FC2C-5B9D-4690-AED1-9D2A9142653F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
