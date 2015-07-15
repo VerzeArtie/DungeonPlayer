@@ -32,8 +32,6 @@ namespace DungeonPlayer
         public static string NODE_SECONDPLAYERSTATUS = "SecondPlayerStatus";
         public static string NODE_THIRDPLAYERSTATUS = "ThirdPlayerStatus";
 
-        public static int MAX_BATTLE_NUMBER = 7;
-
         public static int MAX_GAMEDAY = 100;
 
         public static int MAX_ITEM_BANK = 100;
