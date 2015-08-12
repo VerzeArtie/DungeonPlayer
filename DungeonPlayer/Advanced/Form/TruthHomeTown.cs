@@ -915,7 +915,7 @@ namespace DungeonPlayer
                     
                     UpdateEndingMessage2("Dungeon Player\r\n ～ The Liberty Seeker ～");
 
-                    UpdateEndingMessage2("ストーリー　　【　辻谷　友紀　】\r\n　　　　　　　【　湯淺　與範　】");
+                    UpdateEndingMessage2("ストーリー　　【　湯淺　與範　】\r\n　　　　　　　【　辻谷　友紀　】");
 
                     UpdateEndingMessage2("音楽　　【　湯淺　晋太郎　】");
 
@@ -1108,6 +1108,8 @@ namespace DungeonPlayer
                     using (MessageDisplay md = new MessageDisplay())
                     {
                         md.Message = "【ラナのイヤリング】を手に入れました。";
+                        GroundOne.playbackMessage.Insert(0, md.Message);
+                        GroundOne.playbackInfoStyle.Insert(0, TruthPlaybackMessage.infoStyle.notify);
                         md.StartPosition = FormStartPosition.CenterParent;
                         md.ShowDialog();
                     }
@@ -2208,6 +2210,8 @@ namespace DungeonPlayer
                      using (MessageDisplay md = new MessageDisplay())
                      {
                          md.Message = "【ラナのイヤリング】を手に入れました。";
+                         GroundOne.playbackMessage.Insert(0, md.Message);
+                         GroundOne.playbackInfoStyle.Insert(0, TruthPlaybackMessage.infoStyle.notify);
                          md.StartPosition = FormStartPosition.CenterParent;
                          md.ShowDialog();
                      }
@@ -4589,6 +4593,8 @@ namespace DungeonPlayer
         }
         private void UpdateMainMessage(string message, bool ignoreOK)
         {
+            GroundOne.playbackMessage.Insert(0, message);
+            GroundOne.playbackInfoStyle.Insert(0, TruthPlaybackMessage.infoStyle.normal);
             mainMessage.Text = message;
             mainMessage.Update();
             if (!ignoreOK)

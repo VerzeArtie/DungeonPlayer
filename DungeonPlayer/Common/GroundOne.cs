@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Drawing;
 
 namespace DungeonPlayer
 {
@@ -9,6 +10,9 @@ namespace DungeonPlayer
         //public static TruthDungeonMapAll map = null;
         public static TruthWorldEnvironment WE2 = null; // ゲームストーリー全体のワールド環境フラグ
         public static TruthInformation information = null; // ヘルプ情報
+        public static TruthPlaybackMessage playback = null; // メッセージプレイバック
+        public static List<String> playbackMessage = new List<string>(); // プレイバックメッセージテキスト
+        public static List<TruthPlaybackMessage.infoStyle> playbackInfoStyle = new List<TruthPlaybackMessage.infoStyle>(); // プレイバックメッセージスタイル
         public static XepherPlayer sound = null; // サウンド音源
 
         public static int Difficulty = 1; // ゲーム難易度 デフォルトは１：普通

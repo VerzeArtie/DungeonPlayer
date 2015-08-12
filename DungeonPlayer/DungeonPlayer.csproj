@@ -202,6 +202,12 @@
     <Compile Include="Advanced\Form\TruthItemDesc.Designer.cs">
       <DependentUpon>TruthItemDesc.cs</DependentUpon>
     </Compile>
+    <Compile Include="Advanced\Form\TruthPlaybackMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Advanced\Form\TruthPlaybackMessage.Designer.cs">
+      <DependentUpon>TruthPlaybackMessage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Advanced\Form\TruthPlayerInformation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -504,6 +510,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Advanced\Form\TruthItemDesc.resx">
       <DependentUpon>TruthItemDesc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Advanced\Form\TruthPlaybackMessage.resx">
+      <DependentUpon>TruthPlaybackMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Advanced\Form\TruthPlayerInformation.resx">
       <DependentUpon>TruthPlayerInformation.cs</DependentUpon>

@@ -53,6 +53,18 @@ namespace DungeonPlayer
                         GC.Collect();
                     }
                     break;
+                case Keys.F2:
+                    if (GroundOne.playback == null)
+                    {
+                        GroundOne.playback = new TruthPlaybackMessage();
+                        GroundOne.playback.StartPosition = FormStartPosition.CenterParent;
+                        GroundOne.playback.messageList = GroundOne.playbackMessage;
+                        GroundOne.playback.infoStyleList = GroundOne.playbackInfoStyle;
+                        GroundOne.playback.ShowDialog();
+                        GroundOne.playback = null;
+                        GC.Collect();
+                    }
+                    break;
             }
         }
     }
